@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, Image, ImageBackground, ScrollView, Button, Pressable, Modal, StatusBar } from "react-native";
+import { View, Text, Image, ImageBackground, ScrollView, Button, Pressable, Modal, StatusBar, ActivityIndicator } from "react-native";
 const logoImg = require('./assets/adaptive-icon.png');
 
 export default function App() {
@@ -8,9 +8,8 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
-      <StatusBar barStyle='light-content' backgroundColor='lightgreen'>
-        <Text>Hello StatusBar</Text>
-      </StatusBar>
+      <ActivityIndicator size='large' />
+      <ActivityIndicator size='large' color='midnightblue' animating={false} /> 
     </View>
   );
 }
