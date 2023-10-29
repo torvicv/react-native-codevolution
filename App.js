@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { View, Text, Image, ImageBackground, ScrollView, Button, Pressable, Modal, StatusBar, ActivityIndicator, Alert } from "react-native";
+import Greet from "./components/Greet";
 const logoImg = require('./assets/adaptive-icon.png');
 
 export default function App() {
@@ -8,18 +9,7 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
-      <Button onPress={() => Alert.alert('Invalid data')} title="Alert" />
-      <Button title="Alert 2" onPress={() => Alert.alert("Invalid data", "DOB Incorrect", [
-        {
-          text: 'Cancel',
-          onPress: () => console.log('Cancel pressed')
-        },
-        {
-          text: 'OK',
-          onPress: () => console.log('OK pressed')
-        }
-      ])
-    } />
+      <Greet name='Victor' />  
     </View>
   );
 }
